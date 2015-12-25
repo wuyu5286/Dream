@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Dream</string>
+    <string name="app_name">够不购</string>
+    <string name="home">首页</string>
+    <string name="together">一起买</string>
+    <string name="grab">九点抢</string>
+    <string name="self">我的</string>
+    <string name="loading">加载中&#8230;</string>
 </resources>

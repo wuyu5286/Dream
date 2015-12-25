@@ -1,11 +1,67 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <!--默认主题-->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:screenOrientation">portrait</item>
+        <item name="android:windowAnimationStyle">@style/start_Anim</item>
+    </style>
+    <!--Activity转场动画-->
+    <style name="start_Anim" parent="@android:style/Animation.Activity">
+        <!--<item name="android:activityOpenEnterAnimation">@anim/activity_push_left_in</item>-->
+        <!--<item name="android:activityOpenExitAnimation">@anim/activity_push_left_out</item>-->
+        <!--<item name="android:activityCloseEnterAnimation">@anim/activity_push_right_in</item>-->
+        <!--<item name="android:activityCloseExitAnimation">@anim/activity_push_right_out</item>-->
+        <item name="android:activityOpenEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityOpenExitAnimation">@android:anim/fade_out</item>
+        <item name="android:activityCloseEnterAnimation">@android:anim/fade_in</item>
+        <item name="android:activityCloseExitAnimation">@android:anim/fade_out</item>
+    </style>
+    <!--底部导航栏-->
+    <style name="MainBottomTab">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:layout_weight">1.0</item>
+        <item name="android:gravity">center</item>
+        <item name="android:button">@null</item>
+        <item name="android:textSize">@dimen/text_body</item>
+        <item name="android:textColor">@color/text_color_gary2blue_selector</item>
+    </style>
+    <!--背景有阴影-->
+    <style name="PopupViewTheme_Default">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:windowFullscreen">true</item>
+    </style>
+    <!--背景透明-->
+    <style name="PopupViewTheme_Transparent">
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">true</item>
+        <item name="android:windowIsTranslucent">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/white</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+    <!--从下到上-->
+    <style name="PopupViewBottomAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_view_bottom_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_view_bottom_anim_exit</item>
+    </style>
+    <!--从上到下-->
+    <style name="PopupViewTopAnimation" parent="android:Animation">
+        <item name="android:windowEnterAnimation">@anim/popup_view_top_anim_enter</item>
+        <item name="android:windowExitAnimation">@anim/popup_view_top_anim_exit</item>
     </style>
 
 </resources>
